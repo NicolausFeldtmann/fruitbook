@@ -6,9 +6,86 @@
                 <h2 class="fruit-name"><b>{{item.name}}</b></h2>
                 <h3 class="nerd-name">{{item.botanicName}}</h3>
             </div>
-            <div class="img-box">
-                <img class="fruit-img" src="./../../assets/img/PNG/fruits/{{item.img}}">
+
+            <div class="card-header">
+                <div class="img-box">
+                    <img class="fruit-img" src="./../../assets/img/PNG/fruits/{{item.img}}">
+                </div>
+
+                <div class="rating-section">
+                    <p><b>Bewertung:</b></p>
+                    <div class="stars-section">
+                        @if(item.stars > 4.9) {
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                        } @else if(item.stars > 4.5) {
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-half" src="./../../assets/img/SVG/stars/star-half.svg">
+                        } @else if(item.stars > 4.0) {
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                        } @else if(item.stars > 3.5) {
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-half" src="./../../assets/img/SVG/stars/star-half.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                        } @else if(item.stars > 3.0) {
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-half" src="./../../assets/img/SVG/stars/star-half.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                        }@else if(item.stars > 2.5) {
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                        }@else if(item.stars > 2.0) {
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-half" src="./../../assets/img/SVG/stars/star-half.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                        }@else if(item.stars > 1.5) {
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stras star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stras star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stras star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                        }@else if(item.stars > 1.0) {
+                            <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-half" src="./../../assets/img/SVG/stars/star-half.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                        }@else if(item.stars > 0.5) {
+                            <img class="stras star-full" src="./../../assets/img/SVG/stars/star.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                        }@else if (item.stars > 0.0) {
+                            <img class="stars star-half" src="./../../assets/img/SVG/stars/star-half.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                            <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">
+                        }
+                    </div>
+                </div>
             </div>
+
             <div class="fruit-info-box">
                 <div class="info-fruit">{{item.description}}</div>
                 <div class="info-plant">{{item.genus}}</div>
