@@ -1,0 +1,21 @@
+@import './../../../styles.scss';
+
+.header-content{
+    @include dFlex($ai: baseline);
+    background-color: $fruit_blue;
+    .logo-area{
+        @include dFlex($fd: row);
+        background-color: white;
+        padding: 8px 8px 8px 8px;
+        margin: 16px 0px 16px 16px;
+        border-radius: 10px;
+        .logo{
+            width: 78px;
+        }
+        .logo-name{
+            font-size: 48px;
+            color: $fruit_blue;
+            padding: 0px 8px 0px 8px;
+        }
+    }
+}

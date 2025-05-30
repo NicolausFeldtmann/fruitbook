@@ -1,0 +1,76 @@
+@import './../../styles.scss';
+
+.fruitlist_content{
+    @include dFlex();
+    width: 100%;
+    background-color: $fruit_grey
+}
+
+.fruit-box{
+    @include dFlex();
+    background-color: white;
+    margin: 16px 0px 16px 0px;
+    padding: 12px 12px 12px 12px;
+    width: 480px;
+    border: solid 1px lightgray;
+    border-radius: 10px;
+
+    .name-box{
+        width: 100%;
+        .fruit-name{
+            font-size: 48px;
+            background-color: $fruit_blue;
+            color: white;
+            padding: 4px 12px 4px 12px;
+            border-radius: 10px;
+        }
+        .nerd-name{
+            margin: 8px 24px 0px 24px;
+        }
+    }
+
+    .img-box{
+        width: 100%;
+        .fruit-img{
+            width: 172px;
+        }
+    }
+
+    .fruit-info-box{
+        .info-fruit{
+            @include dShaodow();
+            border: 1px solid lightgray;
+            padding: 8px 4px 8px 4px;
+            margin: 12px 8px 12px 8px;
+            border-radius: 10px;
+        }
+
+        .info-plant{
+            @include dShaodow();
+            border: 1px solid lightgray;
+            padding: 8px 4px 8px 4px;
+            margin: 12px 8px 12px 8px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.review-section{
+    width: 480px;
+    height: 180px;
+    background-color: $fruit_grey;
+    border-radius: 10px;
+    box-shadow: inset 0px 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+    .review{
+        margin: 24px 12px 24px 12px;
+    }
+
+    .review-empty{
+        width: 100%;
+        height: 100%;
+        @include dFlex();
+        font-size: 24px;
+        color: $fruit_blue;
+    }
+}

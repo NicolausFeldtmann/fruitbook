@@ -1,0 +1,30 @@
+<div class="fruitlist_content">
+    @for(item of fruitlist; track item.name){
+
+        <section class="fruit-box fontWorkSans">
+            <div class="name-box">
+                <h2 class="fruit-name"><b>{{item.name}}</b></h2>
+                <h3 class="nerd-name">{{item.botanicName}}</h3>
+            </div>
+            <div class="img-box">
+                <img class="fruit-img" src="./../../assets/img/PNG/fruits/{{item.img}}">
+            </div>
+            <div class="fruit-info-box">
+                <div class="info-fruit">{{item.description}}</div>
+                <div class="info-plant">{{item.genus}}</div>
+            </div>
+
+            <div class="review-section">
+                @for(review of item.reviews; track review) {
+                    <div class="review">
+                        <p class="review-user"><b>{{review.name}} :</b></p>
+                        <p class="review-txt">{{review.text}}</p>
+                    </div>
+                } @empty {
+                    <div class="review-empty">no comments available</div>
+                }
+            </div>
+        </section>
+    }
+
+</div>

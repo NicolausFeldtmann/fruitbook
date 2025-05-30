@@ -1,0 +1,138 @@
+
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+$fruit_blue: rgb(0, 12, 252);
+$fruit_grey: rgb(228, 228, 228);
+
+@mixin dFlex($dp: flex, $fd:column, $jc: center, $ai: center) {
+    display: $dp;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin dShaodow() {
+    box-shadow: 0px 14px 14px -10px rgba(0,0,0,0.87);
+    -webkit-box-shadow: 0px 14px 14px -10px rgba(0,0,0,0.87);
+    -moz-box-shadow: 0px 14px 14px -10px rgba(0,0,0,0.87);
+}
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: italic;
+    font-weight: 300;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* raleway-300italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: italic;
+    font-weight: 300;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-500italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: italic;
+    font-weight: 500;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-600italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: italic;
+    font-weight: 600;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-700italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: italic;
+    font-weight: 700;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-800italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: italic;
+    font-weight: 800;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* raleway-900italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'WorkSans';
+    font-style: italic;
+    font-weight: 900;
+    src: url('./assets/fonts/WorkSans-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  .fontWorkSans{
+    font-family: 'WorkSans';
+  }
