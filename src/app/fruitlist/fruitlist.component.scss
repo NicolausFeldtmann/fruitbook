@@ -87,3 +87,16 @@
     }
 }
 
+.colorGood{
+    color: $fruit_blue;
+}
+
+.colorBad{
+    color: rgb(240, 109, 109);
+}
+
+.bgBox{
+    background-color: $fruit_grey;
+    border-radius: 10px;
+}
+

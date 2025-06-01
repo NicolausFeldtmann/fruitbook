@@ -1,9 +1,9 @@
 <div class="fruitlist_content">
-    @for(item of fruitlist; track item.name){
+    @for(item of fruitlist; track item.name; let idx = $index){
 
         <section class="fruit-box fontWorkSans">
             <div class="name-box">
-                <h2 class="fruit-name"><b>{{item.name}}</b></h2>
+                <h2 class="fruit-name"><app-singlefruit [fruitNumber]="idx + 1"></app-singlefruit><b>{{item.name}}</b></h2>
                 <h3 class="nerd-name">{{item.botanicName}}</h3>
             </div>
 
@@ -13,34 +13,22 @@
                 </div>
 
                 <div class="rating-section">
-                    <p><b>Bewertung: {{item.stars}}</b></p>
+                    <p [ngClass]="{'colorBad': item.stars < 3, 'colorGood': item.stars >= 3}"><b>Bewertung: {{item.stars}}</b></p>
                     <div class="stars-section">
                         @for(count of [1,2,3,4,5]; track fruitlist){
-                        <!--
-                            @if(item.stars >= count){
-                                <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg">    
-                            } @else if(item.stars >= count -0.5){
-                                <img class="stars star-half" src="./../../assets/img/SVG/stars/star-half.svg">    
-                            } @else {
-                                <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg">    
-                            }
-                        -->
-
                             @switch(true) {
-                                @case(item.stars => count) {
+                                @case (item.stars >= count) {
                                     <img class="stars star-full" src="./../../assets/img/SVG/stars/star.svg" alt="Star">
                                 }
 
-                                @case(item.stars => - 0.5) {
-                                    <img class="stars star-half" src="./../../assets/img/SVG/stars/star-half.svg" alt="Star Half">
-
+                                @case (item.stars >= count - 0.5) {
+                                    <img class="stars star-half" src="./../../assets/img/SVG/stars/star-half.svg" alt="Star half">
                                 }
 
                                 @default {
-                                    <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg" alt="Star Empty">
+                                    <img class="stars star-empty" src="./../../assets/img/SVG/stars/star-empty.svg" alt="Star empty">
                                 }
                             }
-                    
                         }
                     </div>
                 </div>
