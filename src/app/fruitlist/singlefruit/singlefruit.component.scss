@@ -75,6 +75,8 @@
         background-color: $fruit_grey;
         border-radius: 10px;
         box-shadow: inset 0px 5px 5px 5px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        flex-direction: column-reverse;
     
         .review{
             margin: 24px 12px 24px 12px;
@@ -86,6 +88,45 @@
             @include dFlex();
             font-size: 24px;
             color: $fruit_blue;
+        }
+    }
+
+    .input-section{
+        margin: 12px 0px 12px 0px;
+        width: 100%;
+        @include dFlex($fd: row);
+
+        textarea{
+            height: 148px;
+            width: 70%;
+            margin: 0px 12px 0px 12px;
+            padding: 12px 12px 12px 12px;
+            border: solid 1px lightgray;
+            border-radius: 10px;
+            box-shadow: 0px 14px 14px -10px rgba(0, 0, 0, 0.87);
+            -webkit-box-shadow: 0px 14px 14px -10px rgba(0, 0, 0, 0.87);
+            -moz-box-shadow: 0px 14px 14px -10px rgba(0, 0, 0, 0.87);
+            font-size: 18px;
+            outline: none;
+        }
+
+        .send-btn{
+            @include dFlex();
+            background-color: $fruit_blue;
+            border-radius: 10px;
+            box-shadow: 0px 14px 14px -10px rgba(0, 0, 0, 0.87);
+            -webkit-box-shadow: 0px 14px 14px -10px rgba(0, 0, 0, 0.87);
+            -moz-box-shadow: 0px 14px 14px -10px rgba(0, 0, 0, 0.87);
+
+            &:hover{
+                background-color: $fruit_ligthblue;
+                cursor: pointer;
+            }
+
+            .send-img{
+                width: 48px;
+                margin: 12px 12px 12px 12px;
+            }
         }
     }
 }
