@@ -19,3 +19,21 @@
         }
     }
 }
+
+@media screen and (max-width: 360px) {
+
+    .header-content{
+
+        .logo-area{
+
+            .logo-name{
+                font-size: 28px;
+            }
+        
+            .logo{
+                width: 28px;
+            }
+        }
+    }
+
+  }

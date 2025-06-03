@@ -76,7 +76,6 @@
         border-radius: 10px;
         box-shadow: inset 0px 5px 5px 5px rgba(0, 0, 0, 0.1);
         overflow: auto;
-        flex-direction: column-reverse;
     
         .review{
             margin: 24px 12px 24px 12px;
@@ -143,4 +142,27 @@
     background-color: $fruit_grey;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 615px) {
+
+    .fruit-box{
+      width: 315px;
+
+      .rating-section{
+
+        .stars-section{
+            .stars{
+                width: 18px;
+            }
+        }
+      }
+  
+      .review-section{
+        width: 300px;
+      }
+    }
+    
+  }
+  
+
 
